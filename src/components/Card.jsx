@@ -1,12 +1,19 @@
 import React from "react";
 // put styling in component
+
+// import component Avatar
+import Avatar from "./Avatar";
+
+// properties passed from app.jsx
 function Card(props) {
   return (
     <div>
       <div className="card">
         <div className="top">
           <h2 className="name">{props.name}</h2>
-          <img className="circle-img" src={props.imgURL} alt="avatar_img" />
+
+          {/* extracted new component called Avatar */}
+          <Avatar imgURL={props.imgURL} />
         </div>
         <div className="bottom">
           <p className="info">{props.phone}</p>
